@@ -1,0 +1,90 @@
+.container .title {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #fff;
+
+  margin: 2rem 0 1rem;
+}
+
+.title .query-text {
+  color: #f7d354;
+}
+
+.movies-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+
+    max-width: 1200px;
+    padding: 2rem;
+    margin: 0 auto;
+}
+
+.movies-container div {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+   
+  width: 20%;
+  
+  color: #fff;
+  margin-bottom: 2.5rem;
+  background: #111;
+  padding: 1rem;
+  border-radius: 4px;
+}
+
+.movies-container div img,
+.movies-container div h2,
+.movies-container div p {
+  margin-bottom: 1rem;
+}
+
+.movies-container div img {
+  overflow: hidden;
+  border-radius: 4px;
+  border: 2px solid #f7d354;
+  width: 191px;
+  height: 281px;
+}
+
+.movies-container div h2 {
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.movies-container div p {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.movies-container div svg {
+  color: #f7d354;
+}
+
+.movies-container div a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 45px;
+
+  padding: 0.2rem;
+
+  background: #f7d354;
+  border: 2px solid #f7d354;
+  border-radius: 4px;
+
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #444;
+
+  transition: all 0.2s;
+}
+
+.movies-container div a:hover {
+  background: transparent;
+  color: #f7d354;
+}

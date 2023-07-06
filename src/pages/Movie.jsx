@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import {
   BsGraphUp,
   BsWallet2,
@@ -18,10 +18,10 @@ export function Movie() {
   const { id } = useParams();
   const [movie, setMovie] = useState(null);
 
-  const formatter = new Intl.NumberFormat('en-US', {
-    style: 'currency',
-    currency: 'USD',
-  });   
+  const formatter = new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+  });
 
   const getMovie = async (url) => {
     const response = await fetch(url);
@@ -31,9 +31,10 @@ export function Movie() {
   };
 
   useEffect(() => {
+    document.title = movie && movie.title;
     const movieUrl = `${moviesUrl}${id}?${apiKey}`;
     getMovie(movieUrl);
-  }, []);
+  }, [movie]);
 
   return (
     <div className="movie-page">

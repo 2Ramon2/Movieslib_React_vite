@@ -17,6 +17,7 @@ export function Home() {
   };
 
   useEffect(() => {
+    document.title = "MoviesLib";
     const topRatedUrl = `${moviesUrl}/top_rated/?${apiKey}`;
     getTopRatedMovies(topRatedUrl);
   }, []);
